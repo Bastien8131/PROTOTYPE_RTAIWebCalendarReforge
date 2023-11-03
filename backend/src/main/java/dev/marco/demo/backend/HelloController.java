@@ -15,7 +15,8 @@ import java.util.Map;
 public class HelloController {
 
     // simple GET response for our example purpose, we return a JSON structure
-    @RequestMapping(value = "/api/message", produces = MediaType.APPLICATION_JSON_VALUE)
+//    @RequestMapping(value = "/api/message", produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "demo/angular/api/message", produces = MediaType.APPLICATION_JSON_VALUE)
     public Map<String, String> index() {
         return Collections.singletonMap("message", IcsToJsonConverter.getICalJson());
     }
