@@ -20,8 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-<!--            <artifactId>spring-boot-starter-web</artifactId>-->
-            <artifactId>spring-boot-maven-plugin</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>net.sf.biweekly</groupId>
@@ -30,4 +29,13 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+<!--                <artifactId>spring-boot-buildpack-platform</artifactId>-->
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
