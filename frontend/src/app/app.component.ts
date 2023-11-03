@@ -10,11 +10,11 @@ export class AppComponent {
   constructor(private httpClient: HttpClient) {
   }
 
-  serverMessage = this.httpClient.get<{message: string}>("api/message");
+  serverMessage = this.httpClient.get<{message: string}>("demo/angular/api/message");
   messageJson: any = null;
 
   ngOnInit() {
-    this.httpClient.get<{ message: string }>("api/message")
+    this.httpClient.get<{ message: string }>("demo/angular/api/message")
         .subscribe(response => {
           let messageString = response.message; // Stockez le message dans la variable serverMessage
           this.messageJson = JSON.parse(messageString);
